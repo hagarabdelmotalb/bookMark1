@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container pt-2">
+        <h1 class="py-3  text-center">Bookmarker</h1>
+        <hr>
+        <div class="myform form-project text-center my-5 py-4 ">
+            <h2>Bookmark you favorite site</h2>
+            <div class="form-group mx-5">
+                <label class="font-weight-bold my-3" for="siteName">Site Name</label>
+                <input  oninput="validationName()" class="form-control" type="text" name="siteName" id="Name" placeholder="Bookmark Name">
+                <p class="alert alert-danger  d-none" id="msgName">the bookmark name should only contain letters and _ and from 2 to 20 long</p>
+            </div>
+
+
+            <div class="form-group mx-5"> 
+                <label class="font-weight-bold my-3" for="siteurl">Site URL</label>
+                <input oninput="validationUrl()" class="form-control" type="text" name="siteurl" id="url" placeholder="Site URL">
+                <p class="alert alert-danger  d-none" id="msgUrl">please enter a valid email</p>
+            </div>
+            <button id="addBtn" onclick="addProduct()" class="mt-4 btn btn-primary">Submit</button>
+        </div> 
+    </div>
+    <div class="output text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>index</td>
+                    <th>Site Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+        <hr>
+        <footer>
+            <h6 class="text-muted text-center">2024 Bookmark Inc.</h6>
+        </footer>
+    </div>    
+    <script src="js/main.js" ></script>
+</body>
+</html>
